@@ -42,6 +42,24 @@ public class CleaningServicesTableViewController: UITableViewController {
     tableView.tableFooterView = UIView()
   }  
   
+    private struct SegueIdentifiers {
+        static let business = "business"
+        static let home = "home"
+    }
+    public override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        guard let viewController = segue.destination as? ProductsViewController
+            else { return }
+        if segue.identifier == SegueIdentifiers.business {
+            viewController.productType = .business
+        } else if segue.identifier == SegueIdentifiers.home {
+            viewController.productType = .home
+        } else {
+            fatalError("Unknown ProductsViewController segue identifier: " +
+                "\(String(describing: segue.identifier))")
+        }
+    }
+    
   // MARK: - UITableViewDelegate  
   public override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
     return 100
