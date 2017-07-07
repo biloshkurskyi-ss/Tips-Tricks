@@ -66,18 +66,12 @@ public class MenuTableViewController: UITableViewController {
   }
   
   fileprivate func showCleaningServicesController() {
-    splitViewController!.showDetailViewController(CleaningServicesBuilder.instantiateNavigationController(), sender: nil)
+    let viewController = CleaningServicesBuilder.instantiateNavigationController()
+    splitViewController!.showDetailViewController(viewController, sender: nil)
   }
   
-  fileprivate func showHomeInfoController() {
-    
-    let bundle = Bundle(for: type(of: self))
-    let storyboard = UIStoryboard(name: "HomeInfoBuilder", bundle: bundle)
-    let navigationController = storyboard.instantiateInitialViewController() as! UINavigationController
-    let viewController = navigationController.topViewController as! HomeInfoViewController
-    viewController.delegate = self
-    viewController.homeInfo = MutableHomeInfo()
-    
+  fileprivate func showHomeInfoController() {    
+    let viewController = HomeInfoBuilder.instantiateNavigationController(delegate: self)
     splitViewController!.showDetailViewController(viewController, sender: nil)
   }
 }

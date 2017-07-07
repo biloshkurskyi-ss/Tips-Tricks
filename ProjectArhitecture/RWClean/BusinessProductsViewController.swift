@@ -32,6 +32,9 @@ import UIKit
 
 public class BusinessProductsViewController: UIViewController {
   
+    //MARK: - Injections
+    internal var networkClient = NetworkClient.shared
+    
   // MARK: - Instance Properties
   internal var imageTasks: [IndexPath: URLSessionDataTask] = [:]
   internal var products: [Product] = []
@@ -52,37 +55,16 @@ public class BusinessProductsViewController: UIViewController {
   
   internal func loadProducts() {
     collectionView.refreshControl?.beginRefreshing()
-    let url = URL(string: "https://rwcleanbackend.herokuapp.com/products/business")!
-    let task = session.dataTask(with: url, completionHandler: { (data, response, error) in
-      if let error = error {
-        print("Product download failed: \(error)")
-        return
-      }
-      guard let data = data else {
-        print("Product download failed: data is nil!")
-        return
-      }
-      let jsonArray: [[String: Any]]
-      do {
-        guard let jsonObject = try JSONSerialization.jsonObject(with: data) as? [[String: Any]] else {
-          print("Product download failed: invalid JSON")
-          return
-        }
-        jsonArray = jsonObject
-        
-      } catch {
-        print("Product download failed: invalid JSON")
-        return
-      }
-      let products = Product.array(jsonArray: jsonArray)
-      DispatchQueue.main.async { [weak self] in
+    networkClient.getProducts(for: .business, success: { [weak self] (products) in
         guard let strongSelf = self else { return }
         strongSelf.products = products
-        strongSelf.collectionView.refreshControl?.endRefreshing()
         strongSelf.collectionView.reloadData()
-      }
-    })
-    task.resume()
+        strongSelf.collectionView.refreshControl?.endRefreshing()
+    }) { [weak self] (error) in
+        guard let strongSelf = self else { return }
+        strongSelf.collectionView.refreshControl?.endRefreshing()
+        print("Product download failed : \(error)")
+    }
   }
   
   // MARK: - View Lifecycle
