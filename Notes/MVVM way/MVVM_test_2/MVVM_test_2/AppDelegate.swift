@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  MVVM_test
+//  MVVM_test_2
 //
-//  Created by Sergey Biloshkurskyi on 7/9/17.
+//  Created by Sergey Biloshkurskyi on 7/10/17.
 //  Copyright © 2017 Sergey Biloshkurskyi. All rights reserved.
 //
 
@@ -12,6 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

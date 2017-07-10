@@ -27,14 +27,17 @@ commentsForCreation.append(" get actual data")
 commentsForCreation.append("The controller doesn’t know anything about the model ")
 commentsForCreation.append("All model processing is done in view model")
 
-resourses.append(Resource(index: 7, topic: "From MVC to MVVM in Swift", url: "http://rasic.info/from-mvc-to-mvvm-in-swift/", comment:commentsForCreation.joined(separator: ", ")))
+resourses.append(Resource(index: 6, topic: "From MVC to MVVM in Swift", url: "http://rasic.info/from-mvc-to-mvvm-in-swift/", comment:commentsForCreation.joined(separator: ", ")))
 
+resourses.append(Resource(index: 7, topic: "1st MVVM example", url: "https://github.com/sergVn/Tips-Tricks/tree/master/Notes/MVVM%20way/MVVM_test", comment: "Test app for understanding"))
+resourses.append(Resource(index: 8, topic: "Different Take on MVVM", url: "http://rasic.info/a-different-take-on-mvvm-with-swift/", comment: nil))
 
-resourses.append(Resource(index: 6, topic: "1st MVVM", url: "Repo", comment: "Test app for understanding"))
+resourses.append(Resource(index: 9, topic: "MVC and MVVM", url: "https://www.captechconsulting.com/blogs/ios-design-patterns-mvc-and-mvvm", comment: "The base meaning of MVVM"))
+resourses.append(Resource(index: 10, topic: "Pure Swift MVVM", url: "https://www.mobiledefense.com/blog/2016/02/07/pure-swift-mvvm/", comment: nil))
+resourses.append(Resource(index: <#T##Int#>, topic: <#T##String#>, url: <#T##String#>, comment: <#T##String?#>))
+
 
 //resourses.append(Resource(index: <#T##Int#>, topic: <#T##String#>, url: "http://rasic.info/a-different-take-on-mvvm-with-swift/", comment: <#T##String?#>))
-
-
 //resourses.append(Resource(index: <#T##Int#>, topic: <#T##String#>, url: <#T##String#>, comment: <#T##String?#>))
 
 
