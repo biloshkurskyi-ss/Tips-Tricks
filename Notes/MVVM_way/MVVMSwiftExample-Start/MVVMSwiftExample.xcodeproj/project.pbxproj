@@ -28,6 +28,9 @@
 		11BCCCEB1D97CABA008DB25F /* UIStoryboard+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BCCCE21D97CABA008DB25F /* UIStoryboard+Loader.swift */; };
 		11E21EAF1DA4106400380E3C /* NSTimer+Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E21EAE1DA4106400380E3C /* NSTimer+Closure.swift */; };
 		A599EADB1F15668B0050E6D9 /* GameScoreboardEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A599EADA1F15668B0050E6D9 /* GameScoreboardEditorViewModel.swift */; };
+		A599EADD1F1569540050E6D9 /* GameScoreboardEditorViewModelFromGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A599EADC1F1569540050E6D9 /* GameScoreboardEditorViewModelFromGame.swift */; };
+		A599EADF1F156C520050E6D9 /* PlayerScoreboardMoveEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A599EADE1F156C520050E6D9 /* PlayerScoreboardMoveEditorViewModel.swift */; };
+		A599EAE11F156CB20050E6D9 /* PlayerScoreboardMoveEditorViewModelFromPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A599EAE01F156CB20050E6D9 /* PlayerScoreboardMoveEditorViewModelFromPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +78,9 @@
 		11BCCCE21D97CABA008DB25F /* UIStoryboard+Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Loader.swift"; sourceTree = "<group>"; };
 		11E21EAE1DA4106400380E3C /* NSTimer+Closure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTimer+Closure.swift"; sourceTree = "<group>"; };
 		A599EADA1F15668B0050E6D9 /* GameScoreboardEditorViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScoreboardEditorViewModel.swift; sourceTree = "<group>"; };
+		A599EADC1F1569540050E6D9 /* GameScoreboardEditorViewModelFromGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScoreboardEditorViewModelFromGame.swift; sourceTree = "<group>"; };
+		A599EADE1F156C520050E6D9 /* PlayerScoreboardMoveEditorViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerScoreboardMoveEditorViewModel.swift; sourceTree = "<group>"; };
+		A599EAE01F156CB20050E6D9 /* PlayerScoreboardMoveEditorViewModelFromPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerScoreboardMoveEditorViewModelFromPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,9 +178,11 @@
 		11F7686E1D97F64A00F159D2 /* GameScoreboardEditor */ = {
 			isa = PBXGroup;
 			children = (
+				A599EADC1F1569540050E6D9 /* GameScoreboardEditorViewModelFromGame.swift */,
 				11615D0C1D97F5C600A007D2 /* GameScoreboardEditorViewController.swift */,
 				118C38731D99B7760006396D /* PlayerScoreboardMoveEditorView.swift */,
 				118C38751D99B79E0006396D /* PlayerScoreboardMoveEditorView.xib */,
+				A599EAE01F156CB20050E6D9 /* PlayerScoreboardMoveEditorViewModelFromPlayer.swift */,
 			);
 			name = GameScoreboardEditor;
 			sourceTree = "<group>";
@@ -211,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				A599EADA1F15668B0050E6D9 /* GameScoreboardEditorViewModel.swift */,
+				A599EADE1F156C520050E6D9 /* PlayerScoreboardMoveEditorViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -355,11 +364,14 @@
 				118C387E1D9B0A180006396D /* UIColor+Theme.swift in Sources */,
 				118C38741D99B7760006396D /* PlayerScoreboardMoveEditorView.swift in Sources */,
 				11BCCCEB1D97CABA008DB25F /* UIStoryboard+Loader.swift in Sources */,
+				A599EADD1F1569540050E6D9 /* GameScoreboardEditorViewModelFromGame.swift in Sources */,
 				11BCCCAF1D97CA2C008DB25F /* HomeViewController.swift in Sources */,
 				118C38781D99B9F10006396D /* UINib+Loader.swift in Sources */,
+				A599EADF1F156C520050E6D9 /* PlayerScoreboardMoveEditorViewModel.swift in Sources */,
 				11BCCCE81D97CABA008DB25F /* Player.swift in Sources */,
 				11E21EAF1DA4106400380E3C /* NSTimer+Closure.swift in Sources */,
 				11BCCCAD1D97CA2C008DB25F /* AppDelegate.swift in Sources */,
+				A599EAE11F156CB20050E6D9 /* PlayerScoreboardMoveEditorViewModelFromPlayer.swift in Sources */,
 				A599EADB1F15668B0050E6D9 /* GameScoreboardEditorViewModel.swift in Sources */,
 				11BCCCEA1D97CABA008DB25F /* Team.swift in Sources */,
 				11BCCCE41D97CABA008DB25F /* Game.swift in Sources */,
